@@ -1,0 +1,153 @@
+<div class="container-fluid">
+    <div class="sub-header d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <h6 class="mb-0 mr-3 fs-18 fw-sbold">Recommended for you</h6>
+            <a href="javascript:;" class="fs-12 colorblack text-underline pt-1">Filtter Settings</a>
+        </div>
+        <div class="d-flex align-items-center top-filter">
+            <div class="btn-group rs-dropdown mr-3" dropdown placement="bottom right">
+                <a id="button-alignment" href="javascript:;" class="filter-icon" dropdownToggle  aria-controls="dropdown-alignment">
+                    <span class="material-icons material-icons-outlined">
+                        sort
+                        </span>
+                    </a>
+                <ul id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right"
+                    role="menu" aria-labelledby="button-alignment">
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;"> Recently Added</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;">Trending Now</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;">Most Viewed</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;">Most Ratted</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;">Most Subscribed</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;">
+                    <!-- <span class="material-icons material-icons-outlined">
+                        toggle_on
+                        </span> -->
+                      Private Channels</a>
+                </li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;">Public Channels</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:;">My Channels</a></li>
+                </ul>
+               
+              </div>
+              <div class="mr-3">
+                  <a href="javascript:;" class="d-flex align-items-center filter-icon" [ngClass]="{'filter-active':showFilter}" (click)="this.showFilter = !this.showFilter"><span class="material-icons material-icons-outlined">tune</span></a>
+              </div>
+              <div class="mr-3">
+                <div class="search-container">
+                    <form>
+                      <input class="search" id="searchright" type="text" #myinput autofocus="off" placeholder="Search">
+                     <a href="javascript:;" (click)="myinput.focus();">
+                      <label class="button searchbutton"><span class="material-icons material-icons-outlined"> search</span></label>
+                    </a>
+                    </form>
+                  </div>
+              </div>
+            </div>
+    </div>
+<div class="filter-section d-flex justify-content-between align-items-center" *ngIf="showFilter">
+    <div class="d-flex chip-wrap">
+    <div class="chip">
+       <span>Default  Preference</span> 
+        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+    </div>
+    <div class="chip active">
+        <span>Default  Preference</span> 
+         <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+     </div>
+    </div>
+     <div class="d-flex align-items-center">
+         <div class="add-chip">
+            <a href="javascript:;" class="mr-3" routerLink="../filters">
+                <span class="material-icons material-icons-outlined">  add</span>
+            </a> 
+            <a routerLink="../filters">
+                <span class="material-icons material-icons-outlined">
+                    settings
+                    </span>
+            </a> 
+            
+         </div>                 
+        <!-- <button type="button" class="btn subscribe-btn ml-3 btn-transparent"> Manage Filters</button> -->
+        
+    </div>
+</div>
+<div class="d-flex flex-wrap mt-3">
+<div class="rs-card" *ngFor="let a of carditems; let i = index">
+<div class="card card-view mb-4">
+    <div class="card-header position-ralative p-0 mb-3">
+    <div class="card-views d-flex align-items-center">
+       <span class="material-icons material-icons-outlined mr-2 fs-16">
+            visibility
+            </span>
+        <span>10</span>
+    </div>
+    <img class="card-img-top img-fluid" src="assets/images/online-class.jpg" alt="Card image cap">
+    <div class="card-category">Public</div>
+    <div class="card-trend">Trending</div>
+    </div>
+    <div class="card-body">
+        <div class="d-flex align-items-center flex-wrap justify-content-between mb-2 pb-1">
+            <div class="fs-9 d-inline-flex align-items-center star-rate">
+                <span class="material-icons mr-1 selected">star_rate</span>
+                <span class="material-icons mr-1 selected">star_rate</span>  
+                <span class="material-icons mr-1 selected">star_rate</span>
+                <span class="material-icons mr-1 selected">star_rate</span>
+                <span class="material-icons material-icons-outlined">star_border</span>
+                <a href="javascript:;" class="ml-1 fs-12 fw-sbold">(13)</a>            
+            </div>
+            <div class="updated-date fw-sbold fs-9">
+                Last Updated: Apr-11-2021
+            </div>
+        </div>
+           
+        <div class="fs-14 fw-bold mb-4 cursor"  routerLink="../details">Up-Skilling Teams with an RPA Organizational Development Plan</div>
+        <div class="d-flex align-items-center flex-wrap justify-content-between mb-4">
+            <div class="fs-9 card-small-txt"># CONTENTS : <a href="javascript:;" class="fs-18 underline">10</a></div>            
+            <button type="button" class="btn subscribe-btn" (click)="this.subscribe[i] = !this.subscribe[i]" *ngIf="!subscribe[i]"> SUBSCRIBE NOW</button>
+            <button type="button" class="btn subscribe-btn subscribed-btn d-flex align-items-center" (click)="this.subscribe[i] = !this.subscribe[i]" *ngIf="subscribe[i]"> <span class="material-icons mr-2">thumb_up </span>
+                 SUBSCRIBEDdd</button>
+        </div>
+        <div class="d-flex align-items-center flex-wrap justify-content-between">
+         <div class="fs-10">
+             <div class="fs-9 card-small-txt mb-1">TOPICS</div>
+             <div class="updated-date fw-sbold fs-9">Automobile &amp; <a href="javascript:;" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">3 More</a></div>
+         </div>
+         <div class="d-flex card-icons">
+           <a href="javascript:;" (click)="openModalinfo(infoTemplate)"><span class="material-icons mr-3">info</span></a>
+           <a href="javascript:;" (click)="openModalshare(shareTemplate)"><span class="material-icons mr-3">share</span></a> 
+           <a href="javascript:;" (click)="this.favicon[i] = !this.favicon[i]">
+               <span class="material-icons" *ngIf="!favicon[i]">favorite_border</span>
+               <span class="material-icons material-icons-outlined fav-active" *ngIf="favicon[i]">
+                favorite
+                </span>
+            </a> 
+         </div>
+     </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<ng-template #infoTemplate>
+    <div class="modal-header border-bottom-0">
+      <h4 class="modal-title pull-left">Information</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     Test
+    </div>
+  </ng-template>
+  <ng-template #shareTemplate>
+    <div class="modal-header border-bottom-0">
+      <h4 class="modal-title pull-left">Share</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+     Test
+    </div>
+  </ng-template>

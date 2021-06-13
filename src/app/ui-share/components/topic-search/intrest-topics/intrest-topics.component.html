@@ -1,0 +1,58 @@
+
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-12">
+        <h1 class="page-title-lg fw-bold mb-4">Welcome to UiShare</h1>
+        <div class="row">
+            <div class="col-sm-5">
+                <h4 class="mb-3 fw-bold">What Topics Intrests you?</h4>
+                <div class="mb-3 col-10 px-0">
+                    <ng-select  class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                    </ng-select>
+                </div>
+                <div class="content-height">
+                    <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                        <label class=" custom-control-label" for="{{i+1}}">
+                            {{t.name}} ({{t.count}})
+                            <input class="custom-control-input" type="checkbox" id="{{i+1}}" (click)="IntrestTopic()">
+                            <span class="rs-checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <h4 class="mb-3 fw-bold">Your Selected Topics:</h4>
+                <div class="mb-2 col-10 px-0">
+                    <ng-select  class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                    </ng-select>
+                </div>
+                <div class="content-height" *ngIf="selectedTopics">
+                    <div class="mb-2">
+                    <a href="javascript:;" class="fs-10 fw-sbold link-text underline">Remove All</a>
+                    </div> 
+                    <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                    <label class=" custom-control-label" for="{{i+1}}">
+                        {{t.name}} ({{t.count}})
+                        <input class="custom-control-input" type="checkbox" id="{{i+1}}">
+                        <span class="rs-checkmark"></span>
+                    </label>
+                </div>
+                </div>
+                <div class="fw-sbold fs-20 no-data py-5 px-5" *ngIf="!selectedTopics">
+                    Select Topics from the List
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+</div>
+<div class="col-12">
+    <div class="page-footer d-flex align-items-center justify-content-end">
+       <button class="rs-btn btn text-uppercase btn" routerLink="tags">Next</button>
+       <span class="fs-14 ml-3">1/3</span>
+    </div>
+   </div>
+
+
+

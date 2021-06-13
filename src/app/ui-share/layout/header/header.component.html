@@ -1,0 +1,87 @@
+<div class="d-flex bg-white border-bottom shadow-sm rs-header">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light pl-0">
+        <a class="navbar-brand logo mr-4" href="index.html"> <img src="assets/images/logo.png"></a>
+        <!-- <button class="navbar-toggler" type="button" class="navbar-toggle" (click)="toggleNavbarCollapsing()">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <button class="navbar-toggler navbar-toggler-right" type="button" (click)="toggleNavbarCollapsing()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" [class.collapse]="navbarCollapsed">
+          <ul class="navbar-nav mr-auto top-header-nav">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="recommended">RECOMMENDED</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="all-channels">ALL CHANNELS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="my-subscription">MY SUBCRIPTIONS </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="shared-withme">SHARED WITH ME </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="my-studio">MY STUDIO </a>
+              </li>
+          </ul>
+
+          <ul class="ml-auto align-items-center d-flex top-menu-rhs">
+            <li>
+              <a class="nav-link">
+                <button type="button" class="btn subscribe-btn d-flex align-items-center">
+                  ACADEMY HOME</button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="my-studio"><span class="material-icons material-icons-outlined">
+                language
+                </span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="my-studio">
+                  <span class="material-icons material-icons-outlined">
+                    notifications
+                    </span></a>
+                </li>              
+              <li>
+                <div class="d-flex align-items-center top-filter justify-content-end">
+                  <div class="btn-group rs-dropdown mr-3" dropdown placement="bottom right">
+                      <a id="button-alignment" href="javascript:;"  dropdownToggle  aria-controls="dropdown-alignment">
+                        <span class="img-circle ml-2">R</span>
+                          </a>
+                      <ul id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right"
+                          role="menu" aria-labelledby="button-alignment">
+                        <li role="menuitem"><a class="dropdown-item" href="javascript:;">Change Password</a></li>
+                        <li role="menuitem"><a class="dropdown-item" href="javascript:;">Settings</a></li>
+                        <li role="menuitem"><a class="dropdown-item" href="javascript:;">Logout</a></li>
+                        
+                      </ul>               
+                    </div>
+                </div>
+              </li>
+          </ul>
+         
+
+        
+        <ul class="ml-auto align-items-center d-none">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle d-flex align-items-center fs-18" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="img-circle ml-2">R</span></a>
+              <div class="dropdown-menu dropdown-menu-right user-dropdown" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">Edit Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="javascript:;">Logout</a>
+              </div>
+          </li>       
+      </ul>
+      </div>
+      </nav>
+
+  
+  
+  </div>
+  </div>
+

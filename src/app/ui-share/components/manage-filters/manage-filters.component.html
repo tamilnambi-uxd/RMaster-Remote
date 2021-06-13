@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="filter-section d-flex justify-content-between align-items-center">
+        <div class="d-flex chip-wrap">
+        <div class="chip">
+           <span>Default  Preference</span> 
+            <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        </div>
+        <div class="chip active">
+            <span>Default  Preference</span> 
+             <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+         </div>
+        </div>
+         <div class="d-flex align-items-center">
+             <div class="add-chip d-flex align-items-center">
+                <a href="javascript:;" class="mr-3">
+                    <span class="material-icons material-icons-outlined">  add</span>
+                </a> 
+                <button type="button" class="btn subscribe-btn ml-3 btn-transparent" (click)="this.rightPanels = !this.rightPanels"> Manage Filters</button> 
+             </div>  
+        </div>
+    </div>
+      <tabset class="tab-container">
+        <tab heading="Topics">
+          <app-intrest-topics></app-intrest-topics>
+        </tab>      
+        <tab  heading="Tags">
+          <app-tag-matches></app-tag-matches>
+        </tab>      
+            <tab heading="Language">
+              <app-preffered-language></app-preffered-language>
+            </tab>
+      </tabset>
+    </div>
+    <div class="right-panel" *ngIf="rightPanels">
+<div class="d-flex justify-content-between mb-2">
+    <h4>Manage Filters</h4>
+   <a href="javascript:;" class="closebtn" (click)="this.rightPanels = !this.rightPanels">
+        <span class="material-icons material-icons-outlined">
+            highlight_off
+    </span>
+    </a>
+</div>
+<div class="fs-12">You can create multiple custom filters and manage</div>
+<div class="mt-3 mb-4">
+    <form action="" class="arrowstyle cf">
+        <input type="text" placeholder="Enter Filter Name" required>
+        <button type="submit" class="text-uppercase">save</button>
+    </form>
+</div>
+<ul class="select-filter">
+    <li>
+        <div class="mb-2">Automation Hub German Version 32.4</div>
+        <div class="d-flex fs-12">
+            <a href="javascript:;" class="mr-3">Make a Copy</a>
+            <a href="javascript:;">Delete</a>
+        </div>
+    </li>
+    <li>
+        <div class="mb-2">New Releases</div>
+        <div class="d-flex fs-12">
+            <a href="javascript:;" class="mr-3">Make a Copy</a>
+            <a href="javascript:;">Delete</a>
+        </div>
+    </li>
+</ul>
+
+</div>

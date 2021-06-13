@@ -1,0 +1,87 @@
+<div class="wrapper container my-5 mb-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-title-lg fw-bold mb-4">Welcome to UiShare</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4 class="mb-3 fw-bold">Tag Matches Your Intrests</h4>
+                </div>                
+            </div> 
+            
+            <div class="row">  
+              <div class="col-sm-3">
+                  <h5 class="mb-3">Category</h5>                  
+                  <div class="content-height">
+                      <ul class="category-sec">
+                          <li><a href="javascript:;" class="active" [ngClass]="{'active': step==='step1'}" (click)="step='step1'">RPA Starter (5)</a></li>
+                          <li><a href="javascript:;" [ngClass]="{'active': step==='step2'}" (click)="step='step2'">Product Training (183)</a></li>
+                          <li><a href="javascript:;" [ngClass]="{'active': step==='step3'}" (click)="step='step3'">New Releases (18)</a></li>
+                          <li><a href="javascript:;" [ngClass]="{'active': step==='step4'}" (click)="step='step4'">Community Tutorials (10)</a></li>
+                      </ul>
+                  </div>
+              </div>
+                <div class="col-sm-9">
+                    <div class="row" *ngIf="step==='step1'">
+                        <div class="col-sm-5">
+                            <h5 class="mb-3">Tags</h5>
+                            <div class="mb-3 col-10 px-0">
+                                <ng-select [items]="cars" class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                                </ng-select>
+                            </div>
+                            <div class="content-height">
+                              <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                                <label class=" custom-control-label" for="{{i+1}}">
+                                    {{t.name}} ({{t.count}})
+                                    <input class="custom-control-input" type="checkbox" id="{{i+1}}">
+                                    <span class="rs-checkmark"></span>
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <h5 class="mb-3">Your Selected Tags</h5>
+                            <div class="mb-3 col-10 px-0">
+                                <ng-select [items]="cars" class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                                </ng-select>
+                            </div>
+                            <div class="content-height">
+                              <!-- <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                                <label class=" custom-control-label" for="{{i+1}}">
+                                    {{t.name}} ({{t.count}})
+                                    <input class="custom-control-input" type="checkbox" id="{{i+1}}">
+                                    <span class="rs-checkmark"></span>
+                                </label>
+                            </div> -->
+                            <!-- <ngx-treeview [items]="items"></ngx-treeview> -->
+                           
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="row" *ngIf="step==='step2'">
+                      <div class="col-12">
+                        Tab2 text Here
+                      </div>
+                    </div>
+                    <div class="row" *ngIf="step==='step3'">
+                      <div class="col-12">
+                        Tab3 text Here
+                      </div>
+                    </div>
+                    <div class="row" *ngIf="step==='step4'">
+                      <div class="col-12">
+                        Tab4 text Here
+                      </div>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+<div class="col-12">
+    <div class="page-footer d-flex align-items-center justify-content-end">
+       <a href="javascript:;" class="rs-btn btn text-uppercase" routerLink="../preffered">Next</a>
+       <span class="fs-14 ml-3">2/3</span>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+.rs-checkbox {
+    &.custom-control {
+        padding-left: 0;
+    }
+    .custom-control-label {
+      display: inline-block;
+      position: relative;
+      padding-left: 24px;
+      cursor: pointer;
+      letter-spacing: 0.25px;
+      line-height: 24px;
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: 12px;
+      user-select: none;
+      color: #05112B;
+      .custom-control-input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .rs-checkmark {
+          background-color: #535353;
+          border-color: #808080;
+        }
+        &:checked ~ .rs-checkmark:after {
+          display: block;
+        }
+      }
+      .rs-checkmark {
+        position: absolute;
+        top: 4px;
+        left:0;
+        width: 15px;
+        height: 15px;
+        min-width: 15px;
+        min-height: 15px;
+        border:1px solid #808080;
+        border-radius: 0;
+        background-color: #fff;
+        &:after {
+          content: '';
+          position: absolute;
+          display: none;
+          left:5px;
+          top: 0;
+          width: 5px;
+          height: 10px;
+          border:solid #fff;
+          border-width: 0 1.5px 1.5px 0;
+          transform: rotate(45deg);
+        }
+      }
+      &:after, &:before {
+        content: none;
+      }
+    }
+}

@@ -1,0 +1,102 @@
+<div class="container my-5 mb-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="page-title-lg fw-bold mb-4">Welcome to UiPath Share</h1>
+      <div class="row">
+        <div class="col-sm-5">
+            <h4 class="mb-3 fw-bold">Available Languages</h4>
+            <div class="mb-3 col-10 px-0">
+                <ng-select  class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                </ng-select>
+            </div>
+            <div class="content-height col-11">
+                <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                    <label class=" custom-control-label" for="{{i+1}}">
+                        {{t.name}} ({{t.count}})
+                        <input class="custom-control-input" type="checkbox" id="{{i+1}}" (click)="IntrestTopic()">
+                        <span class="rs-checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+          <div class="col-sm-5">
+              <h4 class="mb-3 fw-bold">Your Selected Topics:</h4>
+              <div class="mb-2 col-10 px-0">
+                <ng-select  class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                </ng-select>
+            </div>
+              <div class="content-height col-11">
+               <div class="mb-2">
+                <a href="javascript:;" class="fs-10 fw-sbold link-text underline">Remove All</a>
+               </div> 
+                <div class="rs-checkbox custom-control custom-checkbox mb-2" *ngFor="let t of topics; let i = index">
+                  <label class=" custom-control-label" for="{{i+1}}">
+                      {{t.name}} ({{t.count}})
+                      <input class="custom-control-input" type="checkbox" checked id="{{i+1}}">
+                      <span class="rs-checkmark"></span>
+                  </label>
+              </div>
+              </div>
+              <!-- <div class="fw-sbold fs-20 no-data py-5 px-5" *ngIf="!selectedTopics">
+                Select Topics from the List
+              </div> -->
+          </div>
+      </div>
+      <!-- <div class="row mb-4 pb-1">
+          <div class="col-sm-5">
+              <h4 class="mb-3 fw-bold">Your Preffered Language?</h4>
+              <div class="col-10 px-0">
+                  <ng-select [items]="cars" class="rs-select rs-searchable" bindLabel="name" placeholder="Search">
+                  </ng-select>
+              </div>
+          </div>
+      </div>  
+      <div class="d-flex flex-wrap">
+        <div class="rs-chip chip-active mr-3 mb-4">
+          English
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Korean
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Japanese
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Russian
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Spanish
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          French
+        </div>
+        <div class="rs-chip chip-active mr-3 mb-4">
+          English
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Korean
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Japanese
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Russian
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          Spanish
+        </div>
+        <div class="rs-chip mr-3 mb-4">
+          French
+        </div>
+          
+      </div> -->
+  
+  </div>
+  </div>
+</div>
+<div class="col-12">
+  <div class="page-footer d-flex align-items-center justify-content-end">
+     <a href="javascript:;" class="rs-btn btn text-uppercase" routerLink="../../recommended">GET STARTED</a>
+     <span class="fs-14 ml-3">3/3</span>
+  </div>
+</div>

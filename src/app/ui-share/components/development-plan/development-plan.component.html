@@ -1,0 +1,137 @@
+
+<div class="container-fluid">
+    <div class="border-bottom mb-3 pb-3">
+        <div class="media list-view pb-0">
+            <div class="media-left">               
+                <div class="back-arrow">
+                    <a href="javascript:;" routerLink="/recommended">
+                    <span class="material-icons-outlined material-icons">
+                        arrow_back
+                        </span>
+                    </a>
+                </div>
+
+            </div>        
+            <div class="media-body card-body px-3 py-0">
+                <div class="d-flex align-items-center flex-wrap justify-content-between">
+              <div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="category fw-sbold fs-9 mr-3">Public</div>
+                        <div class="updated-date fw-sbold fs-9 mr-3">
+                            Last Updated: Apr-11-2021
+                        </div>
+                        <div class="rs-gary-1 fs-9 d-flex align-items-center">
+                            <span class="material-icons material-icons-outlined mr-2 fs-16 rs-gary-1">
+                                visibility
+                                </span>
+                            <span>10</span>
+                        </div>
+                    </div>               
+                    <h4 class="fw-bold mb-3">Up-Skilling Teams with an RPA Organizational Development Plan</h4>               
+                    <div class="d-flex align-items-center flex-wrap">  
+                        <button type="button" class="btn subscribe-btn mr-3" (click)="this.subscribe = !this.subscribe" *ngIf="!subscribe"> SUBSCRIBE NOW</button>
+                        <button type="button" class="btn subscribe-btn mr-3 subscribed-btn d-flex align-items-center" (click)="this.subscribe = !this.subscribe" *ngIf="subscribe"> <span class="material-icons mr-2">thumb_up </span>
+                             SUBSCRIBED</button>
+                        <div class="d-flex align-items-center flex-wrap mr-3">
+                            <div class="fs-9 d-inline-flex align-items-center star-rate">
+                                <span class="material-icons mr-1 selected">star_rate</span>
+                                <span class="material-icons mr-1 selected">star_rate</span>  
+                                <span class="material-icons mr-1 selected">star_rate</span>
+                                <span class="material-icons mr-1 selected">star_rate</span>
+                                <span class="material-icons material-icons-outlined">star_border</span>
+                                <a href="javascript:;" class="ml-1 fs-12 fw-sbold">(13)</a>            
+                            </div>                        
+                        </div>        
+                        <div class="d-flex card-icons mr-3">
+                        <a href="javascript:;"><span class="material-icons mr-3">info</span></a>
+                        <a href="javascript:;"><span class="material-icons material-icons-outlined mr-3">file_download</span></a>
+                        <a href="javascript:;"><span class="material-icons mr-3">share</span></a> 
+                        <a href="javascript:;"><span class="material-icons">favorite_border</span></a> 
+                        </div>
+                        <div class="updated-date fw-sbold fs-9">Automobile &amp; <a href="javascript:;">3 More</a></div>
+                    
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex align-items-center top-filter justify-content-end">                        
+                        <div class="stars">
+                            <div class="fs-14">Rating This Channels</div>
+                          <ngx-star-rating [(ngModel)]="rating3" [id]="'rating3'" ></ngx-star-rating >
+                        </div>                        
+                      </div>               
+                <div class="d-flex align-items-center top-filter justify-content-end">
+                    <div class="btn-group rs-dropdown mr-3" dropdown placement="bottom right">
+                        <a id="button-alignment" href="javascript:;" class="filter-icon" dropdownToggle  aria-controls="dropdown-alignment">
+                            <span class="material-icons material-icons-outlined">
+                                sort
+                                </span>
+                            </a>
+                        <ul id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right"
+                            role="menu" aria-labelledby="button-alignment">
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;"> Recently Added</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;">Trending Now</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;">Most Viewed</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;">Most Ratted</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;">Most Subscribed</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;">
+                           
+                              Private Channels</a>
+                        </li>
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;">Public Channels</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="javascript:;">My Channels</a></li>
+                        </ul>
+                       
+                      </div>
+                      <div class="mr-3">
+                        <div class="search-container">
+                            <form action="/search" method="get">
+                              <input class="search expandright" id="searchright" type="search" autofocus="off" placeholder="Search">
+                              <label class="button searchbutton" for="searchright"><span class="material-icons material-icons-outlined"> search</span></label>
+                            </form>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+<div class="col-sm-6 mb-3" *ngFor="let a of carditems; let i = index">
+    <div class="card">
+    <div class="media list-view">
+        <div class="media-left img-thumb">
+            <img class="img-fluid mr-3" src="assets/images/online-class.jpg" alt="Card image cap">
+        </div>        
+        <div class="media-body card-body px-3 py-0">
+            <div class="fs-14 fw-bold mb-3">RPA Implementation Methodology Fundamentals</div>
+            <div class="d-flex align-items-center flex-wrap mb-3">
+                <div class="fs-9 d-inline-flex align-items-center star-rate mr-4 pr-2">
+                    <span class="material-icons mr-1 selected">star_rate</span>
+                    <span class="material-icons mr-1 selected">star_rate</span>  
+                    <span class="material-icons mr-1 selected">star_rate</span>
+                    <span class="material-icons mr-1 selected">star_rate</span>
+                    <span class="material-icons material-icons-outlined">star_border</span>
+                    <a href="javascript:;" class="ml-1 fs-12 fw-sbold">(13)</a>            
+                </div>
+                <div class="updated-date fw-sbold fs-9">
+                    Last Updated: Apr-11-2021
+                </div>
+            </div>
+            <div class="d-flex align-items-center flex-wrap">                
+                <div class="d-flex card-icons mr-3">
+                  <a href="javascript:;"><span class="material-icons mr-3">info</span></a>
+                  <a href="javascript:;"><span class="material-icons material-icons-outlined mr-3">file_download</span></a>
+                  <a href="javascript:;"><span class="material-icons mr-3">share</span></a> 
+                  <a href="javascript:;"><span class="material-icons">favorite_border</span></a> 
+                </div>
+                <div class="fs-9 card-small-txt mr-3">Assosiated Channels: <a href="javascript:;" class="fs-18">10</a></div>            
+                <button type="button" class="btn subscribe-btn">VIEW CONTENT</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
